@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.content {
+    width: 100vw;
+    height: auto;
+    padding-top: 60px;
+
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    margin: 20px;
+}
+
+.container p {
+    max-width: 600px; /**/
+    text-align: left; /**/
+    margin-bottom: 20px;
+}
+
+#site-title {
+    font-weight: bold;
+}
+
+.main-nav {
+    margin-left: 60px;
+    padding-top: 10px 0 10px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+.main-nav-list li {
+    display: inline;
+}
+
+.main-nav-list li a {
+    margin-right: 20px;
+}
+
+.text {
+    text-transform: uppercase; /**/
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text:visited {
+    color: #151515;
+}
+
+.wrap-btn {
+    border: none;
+    background: transparent; /* so that the background of the icon will be transparent */
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+}
+
+.close-btn {
+    position: fixed;
+    top: 38px;
+    right: 30px;
+    opacity: 0.7;
+}
+
+.wrap {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%); /* to hide the navigation bar on the left */
+    transition: transform .5s ease-in-out; /* smooth transition on the left */
+}
+
+.wrap.visible {
+    transform: translateX(0);
+}
+
+.wrap-black {
+    background-color: #151515;
+    width: 60%;
+    max-width: 480px;
+    transition-delay: 0.2s;  /* black bg is left behind when sidebar disappears */
+}
+
+.wrap-white {
+    background-color: #ffffff;
+    width: 95%;
+    padding: 40px;
+    position: relative;
+}
+
+.open-btn {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+
+.side-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-list li .main-nav-list li {
+    margin: 20px 0;
+}
+
+.side-list li a, .main-nav-list li a {
+    color: #151515;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+@media(max-width: 600px) {
+    .main-nav {
+        display: none;
+    }
+}
